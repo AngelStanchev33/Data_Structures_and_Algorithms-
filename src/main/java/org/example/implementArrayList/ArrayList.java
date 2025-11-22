@@ -1,16 +1,17 @@
 package org.example.implementArrayList;
 
-public class AList {
+public class ArrayList {
 
     private int[] list;
     private int size;
 
-    public AList() {
+    public ArrayList() {
         this.list = new int[10];
         this.size = 0;
     }
 
     public void add(int value) {
+
         if (size == list.length) {
             list = resizeAndCopy(list, size);
         }
@@ -19,6 +20,7 @@ public class AList {
     }
 
     public void add(int index, int value) {
+
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }
@@ -28,6 +30,7 @@ public class AList {
 
         }
 
+        //move elements to the right;
         if (index < size) {
             for (int i = size - 1; i >= index; i--) {
                 list[i + 1] = list[i];

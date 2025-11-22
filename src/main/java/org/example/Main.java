@@ -1,11 +1,20 @@
 package org.example;
 
-import org.example.implementArrayList.AList;
+import org.example.implementLinkedList.LinkedList;
 import org.example.practice.removeDuplicatesFromSortedArray;
 import org.example.practice.removeElement;
 
 public class Main {
     public static void main(String[] args) {
+
+        LinkedList linkedList = new LinkedList();
+        linkedList.add("Angel");
+        linkedList.add("Dani");
+        linkedList.add("Blago");
+
+        System.out.println(linkedList);
+
+        linkedList.delete(0);
 
         //Remove Duplicates from Sorted Array
         removeDuplicatesFromSortedArray();
