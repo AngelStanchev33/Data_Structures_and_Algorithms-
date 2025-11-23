@@ -3,6 +3,8 @@ package org.example.implementArrayList;
 public class ArrayList {
 
     private int[] list;
+
+    //points towards the number of added elements in the array
     private int size;
 
     public ArrayList() {

@@ -1,19 +1,22 @@
-package org.example.implementStack;
+package org.example.implementArrayList;
 
 public class Stack {
 
-    int maxSize;
+    int size;
+
+    //points towards the next available position
     int top;
     String[] arr;
 
     public Stack() {
-        maxSize = 4;
-        arr = new String[maxSize];
+        size = 4;
+        arr = new String[size];
         top = 0;
     }
 
     public void push(String str) {
-        if (top < maxSize) {
+
+        if (top < size) {
             arr[top] = str;
             top++;
         } else {
@@ -22,6 +25,7 @@ public class Stack {
     }
 
     public String peek() {
+
         if (top > 0) {
             return arr[top - 1];
         }
@@ -30,19 +34,17 @@ public class Stack {
     }
 
     public String pop() {
-        if (!empty()) {
-            String temp = peek();
-            arr[top - 1] = null;
-            top--;
 
-            return temp;
+        if (top == 0) {
+            System.out.println("Stack OverFlow!");
         }
 
-        return null;
+        top--;
+        String temp = arr[top];
+        arr[top] = null;
+
+        return temp;
     }
 
-    public boolean empty() {
 
-        return top == 0;
-    }
 }

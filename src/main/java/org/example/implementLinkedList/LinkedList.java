@@ -8,7 +8,6 @@ public class LinkedList {
     }
 
     public void add(String data) {
-
         if (head == null) {
             head = new Node(data);
         } else {
@@ -19,7 +18,6 @@ public class LinkedList {
     }
 
     public void delete(int index) {
-
         if (index == 0) {
             head = head.getNext();
             return;
@@ -42,7 +40,6 @@ public class LinkedList {
     }
 
     public String get(int index) {
-
         if (index == 0) {
             return head.toString();
         }

@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.implementLinkedList.DoublyLinkedList;
 import org.example.implementLinkedList.LinkedList;
 import org.example.practice.removeDuplicatesFromSortedArray;
 import org.example.practice.removeElement;
@@ -7,20 +8,17 @@ import org.example.practice.removeElement;
 public class Main {
     public static void main(String[] args) {
 
-        LinkedList linkedList = new LinkedList();
-        linkedList.add("Angel");
-        linkedList.add("Dani");
-        linkedList.add("Blago");
-
-        System.out.println(linkedList);
-
-        linkedList.delete(0);
-
         //Remove Duplicates from Sorted Array
         removeDuplicatesFromSortedArray();
 
         //Remove Element
         removeElement();
+
+        DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+        doublyLinkedList.add("Pesho");
+        doublyLinkedList.add("Stefan");
+        doublyLinkedList.add("Angel");
+
 
     }
 
