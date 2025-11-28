@@ -1,6 +1,6 @@
-package org.example.practice;
+package org.example.practice.ArrayList;
 
-public class removeDuplicatesFromSortedArray {
+public class RemoveDuplicatesFromSortedArray {
 
     public static int solution(int[] num) {
         int n = num.length;

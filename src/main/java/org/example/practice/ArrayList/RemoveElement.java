@@ -1,8 +1,6 @@
-package org.example.practice;
+package org.example.practice.ArrayList;
 
-import java.util.Arrays;
-
-public class removeElement {
+public class RemoveElement {
 
     public static int solution(int[] nums, int val) {
         int n = nums.length;
