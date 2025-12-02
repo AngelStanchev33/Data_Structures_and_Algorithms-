@@ -1,4 +1,4 @@
-package org.example.implementFactorialRecursion;
+package org.example.implemenRecursion;
 
 public class Factorial {
 

@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.implemenRecursion.Fibonacci;
 import org.example.practice.ArrayList.RemoveDuplicatesFromSortedArray;
 import org.example.practice.ArrayList.RemoveElement;
 import org.example.practice.LinkedLIst.BrowserHistory;
@@ -26,6 +27,8 @@ public class Main {
         numberOfStudentsUnableToEatLunch();
 
         reverseLinkedListRecursiveAndIteration();
+
+        fibonacciRecursion();
     }
 
     public static void removeDuplicatesFromSortedArray() {
@@ -97,6 +100,10 @@ public class Main {
 
         ListNode<Integer> lastNode = ReverseLinkedListRecursiveAndIteration.solution(head);
         System.out.println();
+    }
+
+    public static void fibonacciRecursion() {
+        Fibonacci.fibonacci(5);
     }
 
 
