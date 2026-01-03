@@ -3,14 +3,17 @@ package org.example;
 import org.example.implemenRecursion.Fibonacci;
 import org.example.implementInSorting.MergeSort;
 import org.example.implementInSorting.QuickSort;
+import org.example.implementTreeNode.TreeNode;
 import org.example.practice.ArrayList.RemoveDuplicatesFromSortedArray;
 import org.example.practice.ArrayList.RemoveElement;
+import org.example.practice.BinarySearch.BinarySearch;
 import org.example.practice.LinkedLIst.BrowserHistory;
 import org.example.practice.LinkedLIst.ListNode;
 import org.example.practice.LinkedLIst.MergeTwoSortedLists;
 import org.example.practice.LinkedLIst.ReverseLinkedList;
 import org.example.practice.Queue.NumberOfStudentsUnableToEatLunch;
 import org.example.practice.Recursive.ReverseLinkedListRecursiveAndIteration;
+import org.example.practice.SearchBinaryTree;
 import org.example.practice.Sorting.MergeKSortedLists;
 import org.example.practice.Sorting.SortAnArrayInsertionSort;
 import org.example.practice.Sorting.SortAnArrayQuickSort;
@@ -42,6 +45,10 @@ public class Main {
         mergeTwoSortedLists();
 
         quickSort();
+
+        binarySearch();
+
+        searchBinaryTree();
     }
 
     public static void removeDuplicatesFromSortedArray() {
@@ -155,12 +162,32 @@ public class Main {
         MergeKSortedLists.solution(lists, l, r);
     }
 
-    public static void quickSort(){
+    public static void quickSort() {
         int[] nums = {5, 2, 1, 8, 5};
         int start = 0;
-        int pivot = nums.length -1;
+        int pivot = nums.length - 1;
 
         SortAnArrayQuickSort.solution(nums, start, pivot);
+    }
+
+    public static void binarySearch() {
+        int[] nums = {1, 2, 2, 7, 10, 12};
+        int target = 10;
+
+        int result = BinarySearch.solution(nums, target);
+    }
+
+    public static void searchBinaryTree() {
+        TreeNode root = new TreeNode(4)
+                .setLeft(new TreeNode(2))
+                .setRight(new TreeNode(7));
+        root.getLeft().setLeft(new TreeNode(1));
+        root.getLeft().setRight(new TreeNode(3));
+
+        int val = 2;
+
+        TreeNode solution = SearchBinaryTree.solution(root, val);
+        System.out.println(solution);
     }
 
 }
