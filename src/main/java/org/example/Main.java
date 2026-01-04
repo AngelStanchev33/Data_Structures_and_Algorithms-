@@ -11,6 +11,7 @@ import org.example.practice.LinkedLIst.BrowserHistory;
 import org.example.practice.LinkedLIst.ListNode;
 import org.example.practice.LinkedLIst.MergeTwoSortedLists;
 import org.example.practice.LinkedLIst.ReverseLinkedList;
+import org.example.practice.LowestCommonAncestorOfBinarySearchTree;
 import org.example.practice.Queue.NumberOfStudentsUnableToEatLunch;
 import org.example.practice.Recursive.ReverseLinkedListRecursiveAndIteration;
 import org.example.practice.SearchBinaryTree;
@@ -49,6 +50,8 @@ public class Main {
         binarySearch();
 
         searchBinaryTree();
+
+        lowestCommonAncestorOfBinarySearchTree();
     }
 
     public static void removeDuplicatesFromSortedArray() {
@@ -188,6 +191,23 @@ public class Main {
 
         TreeNode solution = SearchBinaryTree.solution(root, val);
         System.out.println(solution);
+    }
+
+    public static void lowestCommonAncestorOfBinarySearchTree() {
+        TreeNode root = new TreeNode(6)
+                .setLeft(new TreeNode(2))
+                .setRight(new TreeNode(8));
+        TreeNode p = root.getLeft()
+                .setLeft(new TreeNode(0))
+                .setRight(new TreeNode(4));
+        root.getRight()
+                .setLeft(new TreeNode(7))
+                .setRight(new TreeNode(9));
+        root.getLeft().getRight()
+                .setLeft(new TreeNode(3))
+                .setRight(new TreeNode(5));
+
+        TreeNode solution = LowestCommonAncestorOfBinarySearchTree.solution(root, p, root);
     }
 
 }
