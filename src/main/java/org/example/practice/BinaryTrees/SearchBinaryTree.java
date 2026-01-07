@@ -1,4 +1,4 @@
-package org.example.practice;
+package org.example.practice.BinaryTrees;
 
 import org.example.implementTreeNode.TreeNode;
 

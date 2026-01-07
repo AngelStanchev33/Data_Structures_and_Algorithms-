@@ -2,19 +2,20 @@ package org.example;
 
 import org.example.implemenRecursion.Fibonacci;
 import org.example.implementInSorting.MergeSort;
-import org.example.implementInSorting.QuickSort;
 import org.example.implementTreeNode.TreeNode;
 import org.example.practice.ArrayList.RemoveDuplicatesFromSortedArray;
 import org.example.practice.ArrayList.RemoveElement;
 import org.example.practice.BinarySearch.BinarySearch;
+import org.example.practice.BinaryTrees.DeleteNodeInBinarySearchTree;
+import org.example.practice.BinaryTrees.InsertIntoBinarySearchTree;
 import org.example.practice.LinkedLIst.BrowserHistory;
 import org.example.practice.LinkedLIst.ListNode;
 import org.example.practice.LinkedLIst.MergeTwoSortedLists;
 import org.example.practice.LinkedLIst.ReverseLinkedList;
-import org.example.practice.LowestCommonAncestorOfBinarySearchTree;
+import org.example.practice.BinaryTrees.LowestCommonAncestorOfBinarySearchTree;
 import org.example.practice.Queue.NumberOfStudentsUnableToEatLunch;
 import org.example.practice.Recursive.ReverseLinkedListRecursiveAndIteration;
-import org.example.practice.SearchBinaryTree;
+import org.example.practice.BinaryTrees.SearchBinaryTree;
 import org.example.practice.Sorting.MergeKSortedLists;
 import org.example.practice.Sorting.SortAnArrayInsertionSort;
 import org.example.practice.Sorting.SortAnArrayQuickSort;
@@ -52,6 +53,10 @@ public class Main {
         searchBinaryTree();
 
         lowestCommonAncestorOfBinarySearchTree();
+
+        insertIntoBinarySearchTree();
+
+        DeleteNodeInBST();
     }
 
     public static void removeDuplicatesFromSortedArray() {
@@ -208,6 +213,36 @@ public class Main {
                 .setRight(new TreeNode(5));
 
         TreeNode solution = LowestCommonAncestorOfBinarySearchTree.solution(root, p, root);
+        System.out.println(solution);
     }
 
+    public static void insertIntoBinarySearchTree() {
+        TreeNode root = new TreeNode(4)
+                .setLeft(new TreeNode(2))
+                .setRight(new TreeNode(7));
+        root.getLeft()
+                .setLeft(new TreeNode(1))
+                .setRight(new TreeNode(3));
+
+        int val = 5;
+
+        TreeNode solution = InsertIntoBinarySearchTree.solution(root,val);
+        System.out.println();
+    }
+
+    public static void DeleteNodeInBST(){
+        TreeNode root = new TreeNode(5)
+                .setLeft(new TreeNode(3))
+                .setRight(new TreeNode(6));
+
+        root.getLeft()
+                .setLeft(new TreeNode(2))
+                .setRight(new TreeNode(4));
+        root.getRight()
+                .setRight(new TreeNode(7));
+
+        int key = 5;
+
+        TreeNode solution = DeleteNodeInBinarySearchTree.solution(root, key);
+    }
 }
